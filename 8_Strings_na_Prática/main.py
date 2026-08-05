@@ -19,3 +19,11 @@ def exerciciojoin():
 def exercicio_upper_lower_strip():
     email = input("Digite seu e-mail: ").lower().strip() #lower = minuscula | strip = deleta espaços em branco
     print (f"Bem vindo, seu email é: {email}")
+
+def exerciciofatiamento():
+    palavra = input("Digite uma palavra: ")
+    print(palavra[:3]) #puxa as três PRIMEIRAS letras da palavra que o usuário digitou
+    print(palavra[3:]) #puxa as três ÚLTIMAS letras da palavra que o usuário digitou
+    print(palavra[: :-1]) #faz a palavra digitada pelo usuário se INVERTER, ficando de trás pra frente
+
+exerciciofatiamento()
