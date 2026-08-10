@@ -27,6 +27,10 @@ class Animal:
 
 class Cachorro(Animal):
 
+    def __init__(self, nome, raca):
+        super().__init__(nome)
+        self.raca = raca
+
     def fazer_som(self):
         print(f"{self.nome} está latindo! Au Au")
 
@@ -40,7 +44,6 @@ class Passaro(Animal):
     def fazer_som(self):
         print(f"{self.nome} está piando! Piu Piu Piu")
 
-animais = [Cachorro("Rex"), Gato("Frajola"), Passaro("Piu Piu")]
-
-for animal in animais:
-    animal.fazer_som()
+cachorro1 = Cachorro("Rex", "Labrador")
+print(cachorro1.nome)
+print(cachorro1.raca)
