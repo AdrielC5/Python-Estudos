@@ -1,3 +1,5 @@
+import csv
+
 def exercicioarq1():
     nome = input("Olá, digite seu nome por favor: ")
 
@@ -9,7 +11,6 @@ def exercicioarq1():
             print(linha)
 
 def exercicioarq2():
-    import csv
 
     nome = input("Olá, digite seu nome por favor: ")
 
@@ -22,7 +23,7 @@ def exercicioarq2():
 
     cidade = input("Agora, digite a cidade onde mora: ")
 
-    with open("pessoas.csv", "a", encoding="utf-8") as arquivo:
+    with open("pessoas.csv", "a", newline="", encoding="utf-8") as arquivo:
         escritor = csv.writer(arquivo)
         escritor.writerow([nome, idade, cidade])
 
