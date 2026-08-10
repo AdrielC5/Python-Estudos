@@ -18,9 +18,11 @@ pessoa2 = Pessoa("Beatriz Alexandre", 23)
 pessoa2.apresentar()
 
 class Animal:
+    total_animais = 0
 
     def __init__(self, nome):
         self.nome = nome
+        Animal.total_animais += 1 
 
     def fazer_som(self):
         print(f"{self.nome} está fazendo um som!")
@@ -45,5 +47,8 @@ class Passaro(Animal):
         print(f"{self.nome} está piando! Piu Piu Piu")
 
 cachorro1 = Cachorro("Rex", "Labrador")
-print(cachorro1.nome)
-print(cachorro1.raca)
+gato1 = Gato("Frajola")
+passaro1 = Passaro("Pinto")
+cachorro2 = Cachorro("Jully", "Vira-lata")
+
+print(Animal.total_animais)
