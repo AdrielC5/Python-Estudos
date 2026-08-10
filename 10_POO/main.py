@@ -27,18 +27,20 @@ class Animal:
 
 class Cachorro(Animal):
 
-    def latir(self):
+    def fazer_som(self):
         print(f"{self.nome} está latindo! Au Au")
 
 class Gato(Animal):
 
-    def miar(self):
+    def fazer_som(self):
         print(f"{self.nome} está miando! Miauuuu")
 
-cachorro1 = Cachorro("Rex")
-cachorro1.fazer_som()
-cachorro1.latir()
+class Passaro(Animal):
 
-gato1 = Gato("Frajola")
-gato1.fazer_som()
-gato1.miar()
+    def fazer_som(self):
+        print(f"{self.nome} está piando! Piu Piu Piu")
+
+animais = [Cachorro("Rex"), Gato("Frajola"), Passaro("Piu Piu")]
+
+for animal in animais:
+    animal.fazer_som()
